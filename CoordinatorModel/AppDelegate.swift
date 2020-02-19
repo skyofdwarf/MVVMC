@@ -12,8 +12,8 @@ class AppCoordinator {
     static func setup(for window: UIWindow?) {
         guard
             let window = window,
-            let nav = window.rootViewController as? UINavigationController,
-            let listVC = nav.topViewController as? ListViewController
+            let navigationController = window.rootViewController as? UINavigationController,
+            let listVC = navigationController.topViewController as? ListViewController
             else {
                 return
         }

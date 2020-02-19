@@ -24,17 +24,17 @@ protocol RxListCoordinatorType {
 }
 
 class ListCoordinator: ListCoordinatorType {
-    private unowned let coordinatable: ListViewController
+    private unowned let vc: UIViewController
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
-    init(_ coordinatable: ListViewController) {
-        self.coordinatable = coordinatable
+    init(_ vc: UIViewController) {
+        self.vc = vc
     }
 
     func showDetails(context: Int) {
-        guard let nav = coordinatable.vc.navigationController,
-            let storyboard = coordinatable.storyboard,
+        guard let navigationController = vc.navigationController,
+            let storyboard = vc.storyboard,
             let details = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         else {
             return
@@ -42,13 +42,13 @@ class ListCoordinator: ListCoordinatorType {
 
         details.context = context
 
-        nav.pushViewController(details, animated: true)
+        navigationController.pushViewController(details, animated: true)
     }
 
     func showCategories() {
         guard
-            let nav = coordinatable.vc.navigationController,
-            let storyboard = coordinatable.storyboard,
+            let navigationController = vc.navigationController,
+            let storyboard = vc.storyboard,
             let categoryVC = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
         else {
             return
@@ -60,7 +60,7 @@ class ListCoordinator: ListCoordinatorType {
         categoryVC.vm = CategoryViewModel(dataSource: CategoryDataSource(),
                                           coordinator: coordinator.rx)
 
-        nav.pushViewController(categoryVC, animated: true)
+        navigationController.pushViewController(categoryVC, animated: true)
     }
 }
 

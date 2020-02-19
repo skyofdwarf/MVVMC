@@ -28,7 +28,21 @@
 		CEA3CE7323FD206D003E10F5 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */; };
 		CEA3CE7523FD20B3003E10F5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */; };
 		CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7623FD210F003E10F5 /* ViewModel.swift */; };
+		CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */; };
+		CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */; };
+		CEA3CE8923FD26E1003E10F5 /* ListViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */; };
+		CEA3CE8B23FD26EC003E10F5 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEA3CE8123FD26B9003E10F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE655A5A23FB788500F8D0D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE655A6123FB788500F8D0D4;
+			remoteInfo = CoordinatorModel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CE655AA523FB98FB00F8D0D4 /* Embed Frameworks */ = {
@@ -67,6 +81,12 @@
 		CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
 		CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CEA3CE7623FD210F003E10F5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorModelTests.swift; sourceTree = "<group>"; };
+		CEA3CE8023FD26B9003E10F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCoordinatorTests.swift; sourceTree = "<group>"; };
+		CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEA3CE7923FD26B9003E10F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CE655A6423FB788500F8D0D4 /* CoordinatorModel */,
+				CEA3CE7D23FD26B9003E10F5 /* CoordinatorModelTests */,
 				CE655A6323FB788500F8D0D4 /* Products */,
 				CE655A9B23FB98FA00F8D0D4 /* Frameworks */,
 			);
@@ -96,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				CE655A6223FB788500F8D0D4 /* CoordinatorModel.app */,
+				CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +132,9 @@
 		CE655A6423FB788500F8D0D4 /* CoordinatorModel */ = {
 			isa = PBXGroup;
 			children = (
+				CEA3CE8E23FD28C3003E10F5 /* Details */,
+				CEA3CE8D23FD28BF003E10F5 /* Category */,
+				CEA3CE8C23FD28BA003E10F5 /* List */,
 				CE655A6523FB788500F8D0D4 /* AppDelegate.swift */,
 				CE655A6923FB788500F8D0D4 /* ViewController.swift */,
 				CE655A6B23FB788500F8D0D4 /* Main.storyboard */,
@@ -112,13 +144,6 @@
 				CEA3CE6523FBE1AF003E10F5 /* UIViewController+Rx.swift */,
 				CEA3CE7623FD210F003E10F5 /* ViewModel.swift */,
 				CE655AA823FBAC8800F8D0D4 /* Coordinator.swift */,
-				CE655AA623FBAC5500F8D0D4 /* ListViewController.swift */,
-				CEA3CE6323FBBDBA003E10F5 /* ListCoordinator.swift */,
-				CEA3CE7023FCF606003E10F5 /* ListViewModel.swift */,
-				CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */,
-				CE1B077A23FBB70C00287951 /* CategoryViewController.swift */,
-				CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */,
-				CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */,
 			);
 			path = CoordinatorModel;
 			sourceTree = "<group>";
@@ -131,6 +156,46 @@
 				CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEA3CE7D23FD26B9003E10F5 /* CoordinatorModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */,
+				CEA3CE8023FD26B9003E10F5 /* Info.plist */,
+				CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */,
+				CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */,
+				CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */,
+			);
+			path = CoordinatorModelTests;
+			sourceTree = "<group>";
+		};
+		CEA3CE8C23FD28BA003E10F5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CE655AA623FBAC5500F8D0D4 /* ListViewController.swift */,
+				CEA3CE6323FBBDBA003E10F5 /* ListCoordinator.swift */,
+				CEA3CE7023FCF606003E10F5 /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		CEA3CE8D23FD28BF003E10F5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CE1B077A23FBB70C00287951 /* CategoryViewController.swift */,
+				CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */,
+				CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CEA3CE8E23FD28C3003E10F5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +219,24 @@
 			productReference = CE655A6223FB788500F8D0D4 /* CoordinatorModel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CEA3CE7B23FD26B9003E10F5 /* CoordinatorModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "CoordinatorModelTests" */;
+			buildPhases = (
+				CEA3CE7823FD26B9003E10F5 /* Sources */,
+				CEA3CE7923FD26B9003E10F5 /* Frameworks */,
+				CEA3CE7A23FD26B9003E10F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA3CE8223FD26B9003E10F5 /* PBXTargetDependency */,
+			);
+			name = CoordinatorModelTests;
+			productName = CoordinatorModelTests;
+			productReference = CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +249,10 @@
 				TargetAttributes = {
 					CE655A6123FB788500F8D0D4 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					CEA3CE7B23FD26B9003E10F5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = CE655A6123FB788500F8D0D4;
 					};
 				};
 			};
@@ -183,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				CE655A6123FB788500F8D0D4 /* CoordinatorModel */,
+				CEA3CE7B23FD26B9003E10F5 /* CoordinatorModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +283,13 @@
 				CE655A7223FB788700F8D0D4 /* LaunchScreen.storyboard in Resources */,
 				CE655A6F23FB788700F8D0D4 /* Assets.xcassets in Resources */,
 				CE655A6D23FB788500F8D0D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA3CE7A23FD26B9003E10F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +315,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEA3CE7823FD26B9003E10F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */,
+				CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */,
+				CEA3CE8B23FD26EC003E10F5 /* ListViewControllerTests.swift in Sources */,
+				CEA3CE8923FD26E1003E10F5 /* ListViewCoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEA3CE8223FD26B9003E10F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE655A6123FB788500F8D0D4 /* CoordinatorModel */;
+			targetProxy = CEA3CE8123FD26B9003E10F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE655A6B23FB788500F8D0D4 /* Main.storyboard */ = {
@@ -402,6 +516,44 @@
 			};
 			name = Release;
 		};
+		CEA3CE8423FD26B9003E10F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyofdwarf.CoordinatorModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorModel.app/CoordinatorModel";
+			};
+			name = Debug;
+		};
+		CEA3CE8523FD26B9003E10F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyofdwarf.CoordinatorModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorModel.app/CoordinatorModel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +571,15 @@
 			buildConfigurations = (
 				CE655A7723FB788700F8D0D4 /* Debug */,
 				CE655A7823FB788700F8D0D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "CoordinatorModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA3CE8423FD26B9003E10F5 /* Debug */,
+				CEA3CE8523FD26B9003E10F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

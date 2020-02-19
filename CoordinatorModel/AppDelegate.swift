@@ -8,12 +8,31 @@
 
 import UIKit
 
+class AppCoordinator {
+    static func setup(for window: UIWindow?) {
+        guard
+            let window = window,
+            let nav = window.rootViewController as? UINavigationController,
+            let listVC = nav.topViewController as? ListViewController
+            else {
+                return
+        }
+
+        let coordinator  = ListCoordinator(listVC)
+
+        listVC.vm = ListViewModel(dataSource: ListDataSource(),
+                                  coordinator: coordinator.rx)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        AppCoordinator.setup(for: window)
+
         return true
     }
 }

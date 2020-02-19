@@ -12,7 +12,18 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-class ListCoordinator: Coordinator {
+protocol ListCoordinatorType  {
+    func showDetails(context: Int)
+    func showCategories()
+}
+
+protocol RxListCoordinatorType {
+    var details: Binder<Int> { get }
+    var category: Binder<Void> { get }
+    var categoryChanges: Driver<Int> { get }
+}
+
+class ListCoordinator: ListCoordinatorType {
     private unowned let coordinatable: ListViewController
 
     fileprivate let categoryRelay = PublishRelay<Int>()
@@ -21,9 +32,8 @@ class ListCoordinator: Coordinator {
         self.coordinatable = coordinatable
     }
 
-    func coordinate_to_details(context: Int = 0) {
-        guard
-            let nav = coordinatable.vc.navigationController,
+    func showDetails(context: Int) {
+        guard let nav = coordinatable.vc.navigationController,
             let storyboard = coordinatable.storyboard,
             let details = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         else {
@@ -35,18 +45,22 @@ class ListCoordinator: Coordinator {
         nav.pushViewController(details, animated: true)
     }
 
-    func coordinate_to_category(context: Int = 0) {
+    func showCategories() {
         guard
             let nav = coordinatable.vc.navigationController,
             let storyboard = coordinatable.storyboard,
-            let category = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
+            let categoryVC = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
         else {
             return
         }
 
-        category.delegate = self
+        let coordinator  = CategoryCoordinator(categoryVC)
 
-        nav.pushViewController(category, animated: true)
+        categoryVC.delegate = self
+        categoryVC.vm = CategoryViewModel(dataSource: CategoryDataSource(),
+                                          coordinator: coordinator.rx)
+
+        nav.pushViewController(categoryVC, animated: true)
     }
 }
 
@@ -58,16 +72,16 @@ extension ListCoordinator: CategoryViewControllerDelegate {
 
 extension ListCoordinator: ReactiveCompatible {}
 
-extension Reactive where Base: ListCoordinator {
+extension Reactive: RxListCoordinatorType where Base: ListCoordinator {
     var details: Binder<Int> {
         Binder(base) { (base, context) in
-            base.coordinate_to_details(context: context)
+            base.showDetails(context: context)
         }
     }
 
     var category: Binder<Void> {
         Binder(base) { (base, _) in
-            base.coordinate_to_category()
+            base.showCategories()
         }
     }
 

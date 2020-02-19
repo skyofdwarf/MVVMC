@@ -13,17 +13,21 @@
 		CE655A6D23FB788500F8D0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE655A6B23FB788500F8D0D4 /* Main.storyboard */; };
 		CE655A6F23FB788700F8D0D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE655A6E23FB788700F8D0D4 /* Assets.xcassets */; };
 		CE655A7223FB788700F8D0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE655A7023FB788700F8D0D4 /* LaunchScreen.storyboard */; };
-		CE655A9F23FB98FB00F8D0D4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9C23FB98FB00F8D0D4 /* RxRelay.framework */; };
-		CE655AA023FB98FB00F8D0D4 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9C23FB98FB00F8D0D4 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE655AA123FB98FB00F8D0D4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9D23FB98FB00F8D0D4 /* RxSwift.framework */; };
-		CE655AA223FB98FB00F8D0D4 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9D23FB98FB00F8D0D4 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE655AA323FB98FB00F8D0D4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9E23FB98FB00F8D0D4 /* RxCocoa.framework */; };
-		CE655AA423FB98FB00F8D0D4 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE655A9E23FB98FB00F8D0D4 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE655AA723FBAC5500F8D0D4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655AA623FBAC5500F8D0D4 /* ListViewController.swift */; };
 		CE655AA923FBAC8800F8D0D4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655AA823FBAC8800F8D0D4 /* Coordinator.swift */; };
 		CE655AAB23FBB0EF00F8D0D4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */; };
 		CEA3CE6423FBBDBA003E10F5 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE6323FBBDBA003E10F5 /* ListCoordinator.swift */; };
 		CEA3CE6623FBE1AF003E10F5 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE6523FBE1AF003E10F5 /* UIViewController+Rx.swift */; };
+		CEA3CE6A23FCF52F003E10F5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */; };
+		CEA3CE6B23FCF52F003E10F5 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEA3CE6C23FCF52F003E10F5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */; };
+		CEA3CE6D23FCF52F003E10F5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEA3CE6E23FCF52F003E10F5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */; };
+		CEA3CE6F23FCF52F003E10F5 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEA3CE7123FCF606003E10F5 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7023FCF606003E10F5 /* ListViewModel.swift */; };
+		CEA3CE7323FD206D003E10F5 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */; };
+		CEA3CE7523FD20B3003E10F5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */; };
+		CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7623FD210F003E10F5 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,9 +37,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE655AA423FB98FB00F8D0D4 /* RxCocoa.framework in Embed Frameworks */,
-				CE655AA223FB98FB00F8D0D4 /* RxSwift.framework in Embed Frameworks */,
-				CE655AA023FB98FB00F8D0D4 /* RxRelay.framework in Embed Frameworks */,
+				CEA3CE6D23FCF52F003E10F5 /* RxCocoa.framework in Embed Frameworks */,
+				CEA3CE6B23FCF52F003E10F5 /* RxRelay.framework in Embed Frameworks */,
+				CEA3CE6F23FCF52F003E10F5 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,14 +55,18 @@
 		CE655A6E23FB788700F8D0D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE655A7123FB788700F8D0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE655A7323FB788700F8D0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE655A9C23FB98FB00F8D0D4 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
-		CE655A9D23FB98FB00F8D0D4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
-		CE655A9E23FB98FB00F8D0D4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		CE655AA623FBAC5500F8D0D4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		CE655AA823FBAC8800F8D0D4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CEA3CE6323FBBDBA003E10F5 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		CEA3CE6523FBE1AF003E10F5 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/RxRelay.framework; sourceTree = "<group>"; };
+		CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/RxCocoa.framework; sourceTree = "<group>"; };
+		CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/RxSwift.framework; sourceTree = "<group>"; };
+		CEA3CE7023FCF606003E10F5 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
+		CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		CEA3CE7623FD210F003E10F5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE655AA323FB98FB00F8D0D4 /* RxCocoa.framework in Frameworks */,
-				CE655AA123FB98FB00F8D0D4 /* RxSwift.framework in Frameworks */,
-				CE655A9F23FB98FB00F8D0D4 /* RxRelay.framework in Frameworks */,
+				CEA3CE6C23FCF52F003E10F5 /* RxCocoa.framework in Frameworks */,
+				CEA3CE6A23FCF52F003E10F5 /* RxRelay.framework in Frameworks */,
+				CEA3CE6E23FCF52F003E10F5 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +109,16 @@
 				CE655A6E23FB788700F8D0D4 /* Assets.xcassets */,
 				CE655A7023FB788700F8D0D4 /* LaunchScreen.storyboard */,
 				CE655A7323FB788700F8D0D4 /* Info.plist */,
+				CEA3CE6523FBE1AF003E10F5 /* UIViewController+Rx.swift */,
+				CEA3CE7623FD210F003E10F5 /* ViewModel.swift */,
 				CE655AA823FBAC8800F8D0D4 /* Coordinator.swift */,
 				CE655AA623FBAC5500F8D0D4 /* ListViewController.swift */,
 				CEA3CE6323FBBDBA003E10F5 /* ListCoordinator.swift */,
+				CEA3CE7023FCF606003E10F5 /* ListViewModel.swift */,
 				CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */,
 				CE1B077A23FBB70C00287951 /* CategoryViewController.swift */,
-				CEA3CE6523FBE1AF003E10F5 /* UIViewController+Rx.swift */,
+				CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */,
+				CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */,
 			);
 			path = CoordinatorModel;
 			sourceTree = "<group>";
@@ -114,9 +126,9 @@
 		CE655A9B23FB98FA00F8D0D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE655A9E23FB98FB00F8D0D4 /* RxCocoa.framework */,
-				CE655A9C23FB98FB00F8D0D4 /* RxRelay.framework */,
-				CE655A9D23FB98FB00F8D0D4 /* RxSwift.framework */,
+				CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */,
+				CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */,
+				CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,11 +207,15 @@
 			files = (
 				CE655AA923FBAC8800F8D0D4 /* Coordinator.swift in Sources */,
 				CE655A6A23FB788500F8D0D4 /* ViewController.swift in Sources */,
+				CEA3CE7323FD206D003E10F5 /* CategoryCoordinator.swift in Sources */,
+				CEA3CE7523FD20B3003E10F5 /* CategoryViewModel.swift in Sources */,
 				CE655A6623FB788500F8D0D4 /* AppDelegate.swift in Sources */,
 				CEA3CE6423FBBDBA003E10F5 /* ListCoordinator.swift in Sources */,
 				CE655AA723FBAC5500F8D0D4 /* ListViewController.swift in Sources */,
+				CEA3CE7123FCF606003E10F5 /* ListViewModel.swift in Sources */,
 				CE1B077B23FBB70C00287951 /* CategoryViewController.swift in Sources */,
 				CEA3CE6623FBE1AF003E10F5 /* UIViewController+Rx.swift in Sources */,
+				CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */,
 				CE655AAB23FBB0EF00F8D0D4 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +364,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage",
 				);
 				INFOPLIST_FILE = CoordinatorModel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -370,6 +387,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage",
 				);
 				INFOPLIST_FILE = CoordinatorModel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

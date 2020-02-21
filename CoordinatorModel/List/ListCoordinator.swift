@@ -28,6 +28,10 @@ class ListCoordinator: ListCoordinatorType {
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
+    deinit {
+        print("\(type(of: self)): \(#function)")
+    }
+    
     init(_ vc: UIViewController) {
         self.vc = vc
     }

@@ -57,6 +57,10 @@ class ListViewModel: ViewModel {
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
+    deinit {
+        print("\(type(of: self)): \(#function)")
+    }
+
     init(dataSource: ListDataSourceType, coordinator: RxListCoordinatorType) {
         self.dataSource = dataSource
         self.coordinator = coordinator

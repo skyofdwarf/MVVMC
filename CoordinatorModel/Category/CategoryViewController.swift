@@ -21,7 +21,6 @@ class CategoryViewController: UIViewController {
 
     weak var delegate: CategoryViewControllerDelegate?
 
-    lazy var coordinator: CategoryCoordinator = { CategoryCoordinator(self) }()
     var vm: CategoryViewModel?
 
     let db = DisposeBag()
@@ -49,13 +48,10 @@ class CategoryViewController: UIViewController {
 
         // output
         output.value
-            .do(onNext: { [weak self] value in
+            .drive(onNext: { [weak self] value in
                 guard let self = self else { return }
                 self.delegate?.categoryViewController(self, didSelectSomething: value)
             })
-            .map { _ in () }
-            .asDriver()
-            .drive(coordinator.rx.back)
             .disposed(by: db)
     }
 }

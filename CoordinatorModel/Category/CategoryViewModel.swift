@@ -51,6 +51,10 @@ class CategoryViewModel: ViewModel {
     let dataSource: CategoryDataSourceInterface
     let coordinator: RxCategoryCoordinatorInterface
 
+    deinit {
+        print("\(type(of: self)): \(#function)")
+    }
+    
     init(dataSource: CategoryDataSourceInterface, coordinator: RxCategoryCoordinatorInterface) {
         self.dataSource = dataSource
         self.coordinator = coordinator
@@ -64,6 +68,11 @@ class CategoryViewModel: ViewModel {
         let value = input.fetch
             .flatMap(dataSource.random)
             .asDriver(onErrorJustReturn: 0)
+
+        value
+            .map { _ in () }
+            .drive(coordinator.back)
+            .disposed(by: db)
 
         return Output(value: value)
     }

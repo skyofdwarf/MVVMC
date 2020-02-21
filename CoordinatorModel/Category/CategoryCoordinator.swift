@@ -12,9 +12,11 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-protocol CategoryCoordinatorInterface  {
+protocol CategoryCoordinatorInterface {
     func back()
     func showHelp()
+
+    var rx: RxCategoryCoordinatorInterface { get }
 }
 
 protocol RxCategoryCoordinatorInterface  {
@@ -22,7 +24,9 @@ protocol RxCategoryCoordinatorInterface  {
     var help: Binder<Void> { get }
 }
 
-class CategoryCoordinator: CategoryCoordinatorInterface {
+final class CategoryCoordinator: CategoryCoordinatorInterface {
+    var rx: RxCategoryCoordinatorInterface { Reactive<CategoryCoordinator>(self) }
+
     private unowned let vc: UIViewController
 
     deinit {
@@ -42,8 +46,6 @@ class CategoryCoordinator: CategoryCoordinatorInterface {
     }
 }
 
-extension CategoryCoordinator: ReactiveCompatible {}
-
 extension Reactive: RxCategoryCoordinatorInterface where Base: CategoryCoordinator {
     var back: Binder<Void> {
         Binder(base) { (base, _) in
@@ -57,4 +59,3 @@ extension Reactive: RxCategoryCoordinatorInterface where Base: CategoryCoordinat
         }
     }
 }
-

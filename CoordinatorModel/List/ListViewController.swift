@@ -59,10 +59,9 @@ class ListViewController: UIViewController {
         .disposed(by: db)
 
         output.category
+            .map { "\($0)" }
             .debug()
-            .drive(onNext: { [weak self] (category) in
-                self?.title = "\(category)"
-            })
+            .drive(rx.title)
             .disposed(by: db)
     }
 }

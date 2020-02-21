@@ -49,20 +49,20 @@ class CategoryViewModel: ViewModel {
     let db = DisposeBag()
 
     let dataSource: CategoryDataSourceInterface
-    let coordinator: RxCategoryCoordinatorInterface
+    let coordinator: CategoryCoordinatorInterface
 
     deinit {
         print("\(type(of: self)): \(#function)")
     }
     
-    init(dataSource: CategoryDataSourceInterface, coordinator: RxCategoryCoordinatorInterface) {
+    init(dataSource: CategoryDataSourceInterface, coordinator: CategoryCoordinatorInterface) {
         self.dataSource = dataSource
         self.coordinator = coordinator
     }
 
     func transform(_ input: Input) -> Output {
         input.back
-            .bind(to: coordinator.back)
+            .bind(to: coordinator.rx.back)
             .disposed(by: db)
 
         let value = input.fetch
@@ -71,7 +71,7 @@ class CategoryViewModel: ViewModel {
 
         value
             .map { _ in () }
-            .drive(coordinator.back)
+            .drive(coordinator.rx.back)
             .disposed(by: db)
 
         return Output(value: value)

@@ -15,6 +15,8 @@ import RxRelay
 protocol ListCoordinatorType  {
     func showDetails(context: Int)
     func showCategories()
+
+    var rx: RxListCoordinatorType { get }
 }
 
 protocol RxListCoordinatorType {
@@ -25,6 +27,8 @@ protocol RxListCoordinatorType {
 
 class ListCoordinator: ListCoordinatorType {
     private unowned let vc: UIViewController
+
+    var rx: RxListCoordinatorType { Reactive<ListCoordinator>(self) }
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
@@ -62,7 +66,7 @@ class ListCoordinator: ListCoordinatorType {
 
         categoryVC.delegate = self
         categoryVC.vm = CategoryViewModel(dataSource: CategoryDataSource(),
-                                          coordinator: coordinator.rx)
+                                          coordinator: coordinator)
 
         navigationController.pushViewController(categoryVC, animated: true)
     }

@@ -53,7 +53,7 @@ class ListViewModel: ViewModel {
     let db = DisposeBag()
 
     let dataSource: ListDataSourceType
-    let coordinator: RxListCoordinatorType
+    let coordinator: ListCoordinatorType
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
@@ -61,7 +61,7 @@ class ListViewModel: ViewModel {
         print("\(type(of: self)): \(#function)")
     }
 
-    init(dataSource: ListDataSourceType, coordinator: RxListCoordinatorType) {
+    init(dataSource: ListDataSourceType, coordinator: ListCoordinatorType) {
         self.dataSource = dataSource
         self.coordinator = coordinator
     }
@@ -71,14 +71,14 @@ class ListViewModel: ViewModel {
             .flatMap(dataSource.fetch)
 
         input.edit
-            .bind(to: coordinator.category)
+            .bind(to: coordinator.rx.category)
             .disposed(by: db)
 
         input.select
             .map { $0.row }
-            .bind(to: coordinator.details)
+            .bind(to: coordinator.rx.details)
             .disposed(by: db)
 
-        return Output(items: items, category: coordinator.categoryChanges)
+        return Output(items: items, category: coordinator.rx.categoryChanges)
     }
 }

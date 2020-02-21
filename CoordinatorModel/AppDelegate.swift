@@ -18,10 +18,10 @@ class AppCoordinator {
                 return
         }
 
-        let coordinator  = ListCoordinator(listVC)
+        let coordinator = ListCoordinator(listVC)
 
         listVC.vm = ListViewModel(dataSource: ListDataSource(),
-                                  coordinator: coordinator.rx)
+                                  coordinator: coordinator)
     }
 }
 

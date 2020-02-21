@@ -15,7 +15,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
 
-    lazy var coordinator: DetailsCoordinator = { DetailsCoordinator(self) }()
+    lazy var coordinator: DetailsCoordinator = { DetailsCoordinator(viewController: self) }()
     let db = DisposeBag()
 
     var context: Int?
@@ -44,14 +44,14 @@ class DetailsViewController: UIViewController {
 }
 
 class DetailsCoordinator: Coordinator {
-    private unowned let coordinatable: DetailsViewController
+    unowned let viewController: UIViewController
 
-    init(_ coordinatable: DetailsViewController) {
-        self.coordinatable = coordinatable
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
     }
 
     func coordinate_to_back() {
-        coordinatable.navigationController?.popViewController(animated: true)
+        viewController.navigationController?.popViewController(animated: true)
     }
 }
 

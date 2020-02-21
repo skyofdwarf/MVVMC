@@ -25,8 +25,8 @@ protocol RxListCoordinatorType {
     var categoryChanges: Driver<Int> { get }
 }
 
-class ListCoordinator: ListCoordinatorType {
-    private unowned let vc: UIViewController
+class ListCoordinator: Coordinator, ListCoordinatorType {
+    let viewController: UIViewController
 
     var rx: RxListCoordinatorType { Reactive<ListCoordinator>(self) }
 
@@ -36,13 +36,13 @@ class ListCoordinator: ListCoordinatorType {
         print("\(type(of: self)): \(#function)")
     }
     
-    init(_ vc: UIViewController) {
-        self.vc = vc
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
     }
 
     func showDetails(context: Int) {
-        guard let navigationController = vc.navigationController,
-            let storyboard = vc.storyboard,
+        guard let navigationController = viewController.navigationController,
+            let storyboard = viewController.storyboard,
             let details = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         else {
             return
@@ -55,8 +55,8 @@ class ListCoordinator: ListCoordinatorType {
 
     func showCategories() {
         guard
-            let navigationController = vc.navigationController,
-            let storyboard = vc.storyboard,
+            let navigationController = viewController.navigationController,
+            let storyboard = viewController.storyboard,
             let categoryVC = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController
         else {
             return

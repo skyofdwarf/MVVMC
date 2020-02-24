@@ -25,36 +25,29 @@ protocol RxListCoordinatorType {
     var categoryChanges: Driver<Int> { get }
 }
 
-class ListCoordinator: Coordinator, ListCoordinatorType {
-    let viewController: UIViewController
-
+final class ListCoordinator: Coordinator, ListCoordinatorType {
     var rx: RxListCoordinatorType { Reactive<ListCoordinator>(self) }
 
     fileprivate let categoryRelay = PublishRelay<Int>()
 
-    deinit {
-        print("\(type(of: self)): \(#function)")
-    }
-    
-    required init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
-
     func showDetails(context: Int) {
-        guard let navigationController = viewController.navigationController,
+        guard
+            let viewController = coordinatable.viewController,
+            let navigationController = viewController.navigationController,
             let storyboard = viewController.storyboard,
             let details = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         else {
             return
         }
 
-        details.context = context
+        details.vm = DetailsViewModel(context: context, coordinator: DetailsCoordinator(details))
 
         navigationController.pushViewController(details, animated: true)
     }
 
     func showCategories() {
         guard
+            let viewController = coordinatable.viewController,
             let navigationController = viewController.navigationController,
             let storyboard = viewController.storyboard,
             let categoryVC = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController

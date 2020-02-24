@@ -24,25 +24,15 @@ protocol RxCategoryCoordinatorInterface  {
     var help: Binder<Void> { get }
 }
 
-final class CategoryCoordinator: CategoryCoordinatorInterface {
+final class CategoryCoordinator: Coordinator, CategoryCoordinatorInterface {
     var rx: RxCategoryCoordinatorInterface { Reactive<CategoryCoordinator>(self) }
 
-    private unowned let vc: UIViewController
-
-    deinit {
-        print("\(type(of: self)): \(#function)")
-    }
-    
-    init(_ vc: UIViewController) {
-        self.vc = vc
-    }
-
     func back() {
-        vc.navigationController?.popViewController(animated: true)
+        coordinatable.viewController?.navigationController?.popViewController(animated: true)
     }
 
     func showHelp() {
-        vc.navigationController?.pushViewController(UIViewController(), animated: true)
+        coordinatable.viewController?.navigationController?.pushViewController(UIViewController(), animated: true)
     }
 }
 

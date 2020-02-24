@@ -18,7 +18,7 @@ class AppCoordinator {
                 return
         }
 
-        let coordinator = ListCoordinator(viewController: listVC)
+        let coordinator = ListCoordinator(listVC)
 
         listVC.vm = ListViewModel(dataSource: ListDataSource(),
                                   coordinator: coordinator)

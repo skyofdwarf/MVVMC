@@ -9,8 +9,41 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
-    var viewController: UIViewController { get }
+/// Coordinatable protocol
+protocol Coordinatable: class {
+    var viewController: UIViewController? { get }
+    var view: UIView? { get }
+}
 
-    init(viewController: UIViewController)
+extension UIViewController: Coordinatable {
+    var viewController: UIViewController? { self }
+    var view: UIView? { nil }
+}
+
+extension UIView: Coordinatable {
+    var viewController: UIViewController? { nil }
+    var view: UIView? { self }
+}
+
+/// Coordinator protocol
+protocol CoordinatorType {
+    var coordinatable: Coordinatable { get }
+
+    init(_ coordinatable: Coordinatable)
+}
+
+/// Base Coordinator class
+class Coordinator: CoordinatorType {
+    /// Coordinatable object
+    ///
+    /// - note: `coordinatable` is _unowned_
+    unowned let coordinatable: Coordinatable
+
+    deinit {
+        print("\(type(of: self)): \(#function)")
+    }
+
+    required init(_ coordinatable: Coordinatable) {
+        self.coordinatable = coordinatable
+    }
 }

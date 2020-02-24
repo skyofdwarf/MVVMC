@@ -32,6 +32,8 @@
 		CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */; };
 		CEA3CE8923FD26E1003E10F5 /* ListViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */; };
 		CEA3CE8B23FD26EC003E10F5 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */; };
+		CEF2655B2403AB5D00761F83 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */; };
+		CEF2655D2403AB6600761F83 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCoordinatorTests.swift; sourceTree = "<group>"; };
 		CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
+		CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				CE655AAA23FBB0EF00F8D0D4 /* DetailsViewController.swift */,
+				CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */,
+				CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -304,12 +310,14 @@
 				CE655A6A23FB788500F8D0D4 /* ViewController.swift in Sources */,
 				CEA3CE7323FD206D003E10F5 /* CategoryCoordinator.swift in Sources */,
 				CEA3CE7523FD20B3003E10F5 /* CategoryViewModel.swift in Sources */,
+				CEF2655B2403AB5D00761F83 /* DetailsViewModel.swift in Sources */,
 				CE655A6623FB788500F8D0D4 /* AppDelegate.swift in Sources */,
 				CEA3CE6423FBBDBA003E10F5 /* ListCoordinator.swift in Sources */,
 				CE655AA723FBAC5500F8D0D4 /* ListViewController.swift in Sources */,
 				CEA3CE7123FCF606003E10F5 /* ListViewModel.swift in Sources */,
 				CE1B077B23FBB70C00287951 /* CategoryViewController.swift in Sources */,
 				CEA3CE6623FBE1AF003E10F5 /* UIViewController+Rx.swift in Sources */,
+				CEF2655D2403AB6600761F83 /* DetailsCoordinator.swift in Sources */,
 				CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */,
 				CE655AAB23FBB0EF00F8D0D4 /* DetailsViewController.swift in Sources */,
 			);

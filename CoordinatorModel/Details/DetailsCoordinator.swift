@@ -11,11 +11,13 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
+/// Protocol using functional interface
 protocol DetailsCoordinatorType {
     func back()
 }
 
-final class DetailsCoordinator: Coordinator, DetailsCoordinatorType {
+/// DetailsCoordinator can be subclassed
+/*final*/ class DetailsCoordinator: Coordinator, DetailsCoordinatorType {
     func back() {
         coordinatable.viewController?.navigationController?.popViewController(animated: true)
     }
@@ -23,6 +25,7 @@ final class DetailsCoordinator: Coordinator, DetailsCoordinatorType {
 
 extension DetailsCoordinator: ReactiveCompatible {}
 
+/// DetailsCoordinator adopts ReactiveCompatible to provide rx way interfaces
 extension Reactive where Base: DetailsCoordinator {
     var back: Binder<Void> {
         Binder(base) { (base, _) in

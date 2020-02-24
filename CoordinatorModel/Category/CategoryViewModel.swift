@@ -12,17 +12,17 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-protocol CategoryDataSourceInterface {
+protocol CategoryDataSourceType {
     func random() -> Observable<Int>
 }
 
-class CategoryDataSource: CategoryDataSourceInterface {
+class CategoryDataSource: CategoryDataSourceType {
     func random() -> Observable<Int> {
         .just(Int.random(in: 0..<100))
     }
 }
 
-class MockCategoryDataSource: CategoryDataSourceInterface {
+class MockCategoryDataSource: CategoryDataSourceType {
     func random() -> Observable<Int> {
         .just(100)
     }
@@ -48,21 +48,21 @@ class CategoryViewModel: ViewModel {
 
     let db = DisposeBag()
 
-    let dataSource: CategoryDataSourceInterface
-    let coordinator: CategoryCoordinatorInterface
+    let dataSource: CategoryDataSourceType
+    let coordinator: CategoryCoordinatorType
 
     deinit {
         print("\(type(of: self)): \(#function)")
     }
     
-    init(dataSource: CategoryDataSourceInterface, coordinator: CategoryCoordinatorInterface) {
+    init(dataSource: CategoryDataSourceType, coordinator: CategoryCoordinatorType) {
         self.dataSource = dataSource
         self.coordinator = coordinator
     }
 
     func transform(_ input: Input) -> Output {
         input.back
-            .bind(to: coordinator.rx.back)
+            .bind(to: rx.back)
             .disposed(by: db)
 
         let value = input.fetch
@@ -71,9 +71,26 @@ class CategoryViewModel: ViewModel {
 
         value
             .map { _ in () }
-            .drive(coordinator.rx.back)
+            .drive(rx.back)
             .disposed(by: db)
 
         return Output(value: value)
+    }
+}
+
+extension CategoryViewModel: ReactiveCompatible {}
+
+/// ViewModel adopts ReactiveCompatible to use cordinator with rx way
+extension Reactive where Base: CategoryViewModel {
+    var back: Binder<Void> {
+        Binder(base) { (base, context) in
+            base.coordinator.back()
+        }
+    }
+
+    var showHelp: Binder<Void> {
+        Binder(base) { (base, context) in
+            base.coordinator.showHelp()
+        }
     }
 }

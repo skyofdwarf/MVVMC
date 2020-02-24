@@ -71,14 +71,14 @@ class ListViewModel: ViewModel {
             .flatMap(dataSource.fetch)
 
         input.edit
-            .bind(to: coordinator.rx.category)
+            .bind(to: coordinator.category)
             .disposed(by: db)
 
         input.select
             .map { $0.row }
-            .bind(to: coordinator.rx.details)
+            .bind(to: coordinator.details)
             .disposed(by: db)
 
-        return Output(items: items, category: coordinator.rx.categoryChanges)
+        return Output(items: items, category: coordinator.categoryChanges)
     }
 }

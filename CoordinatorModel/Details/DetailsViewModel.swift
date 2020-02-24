@@ -28,32 +28,22 @@ class DetailsViewModel: ViewModel {
 
     let db = DisposeBag()
     let context: Int
-    let coordinator: DetailsCoordinatorType
+    let coordinator: DetailsCoordinator
 
     deinit {
         print("\(type(of: self)): \(#function)")
     }
 
-    init(context: Int, coordinator: DetailsCoordinatorType) {
+    init(context: Int, coordinator: DetailsCoordinator) {
         self.context = context
         self.coordinator = coordinator
-    }
+    }                          
 
     func transform(_ input: Input) -> Output {
         input.back
-            .bind(to: rx.back)
+            .bind(to: coordinator.rx.back)
             .disposed(by: db)
 
         return Output(title: Observable.just(context).asDriver(onErrorJustReturn: 0))
-    }
-}
-
-extension DetailsViewModel: ReactiveCompatible {}
-
-extension Reactive where Base: DetailsViewModel {
-    var back: Binder<Void> {
-        Binder(base) { (base, context) in
-            base.coordinator.back()
-        }
     }
 }

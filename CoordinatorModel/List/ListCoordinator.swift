@@ -12,24 +12,34 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
+/// Protocol using rx interface
 protocol ListCoordinatorType  {
-    func showDetails(context: Int)
-    func showCategories()
-
-    var rx: RxListCoordinatorType { get }
-}
-
-protocol RxListCoordinatorType {
     var details: Binder<Int> { get }
     var category: Binder<Void> { get }
     var categoryChanges: Driver<Int> { get }
 }
 
 final class ListCoordinator: Coordinator, ListCoordinatorType {
-    var rx: RxListCoordinatorType { Reactive<ListCoordinator>(self) }
-
     fileprivate let categoryRelay = PublishRelay<Int>()
 
+    var details: Binder<Int> {
+        Binder(self) { (base, context) in
+            base.showDetails(context: context)
+        }
+    }
+
+    var category: Binder<Void> {
+        Binder(self) { (base, _) in
+            base.showCategories()
+        }
+    }
+
+    var categoryChanges: Driver<Int> {
+        return categoryRelay.asDriver(onErrorJustReturn: 0)
+    }
+}
+
+private extension ListCoordinator {
     func showDetails(context: Int) {
         guard
             let viewController = coordinatable.viewController,
@@ -68,25 +78,5 @@ final class ListCoordinator: Coordinator, ListCoordinatorType {
 extension ListCoordinator: CategoryViewControllerDelegate {
     func categoryViewController(_ vc: CategoryViewController, didSelectSomething something: Int) {
         categoryRelay.accept(something)
-    }
-}
-
-extension ListCoordinator: ReactiveCompatible {}
-
-extension Reactive: RxListCoordinatorType where Base: ListCoordinator {
-    var details: Binder<Int> {
-        Binder(base) { (base, context) in
-            base.showDetails(context: context)
-        }
-    }
-
-    var category: Binder<Void> {
-        Binder(base) { (base, _) in
-            base.showCategories()
-        }
-    }
-
-    var categoryChanges: Driver<Int> {
-        return base.categoryRelay.asDriver(onErrorJustReturn: 0)
     }
 }

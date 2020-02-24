@@ -12,18 +12,13 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-/// Protocol using functional interface
+/// Protocol using function interface
 protocol CategoryCoordinatorType {
     func back()
-    func showHelp()
 }
 
 final class CategoryCoordinator: Coordinator, CategoryCoordinatorType {
     func back() {
         coordinatable.viewController?.navigationController?.popViewController(animated: true)
-    }
-
-    func showHelp() {
-        coordinatable.viewController?.navigationController?.pushViewController(UIViewController(), animated: true)
     }
 }

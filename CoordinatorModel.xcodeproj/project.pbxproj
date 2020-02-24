@@ -30,10 +30,20 @@
 		CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7623FD210F003E10F5 /* ViewModel.swift */; };
 		CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */; };
 		CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */; };
-		CEA3CE8923FD26E1003E10F5 /* ListViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */; };
-		CEA3CE8B23FD26EC003E10F5 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */; };
 		CEF2655B2403AB5D00761F83 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */; };
 		CEF2655D2403AB6600761F83 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */; };
+		CEF2655E2403B5DA00761F83 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */; };
+		CEF2655F2403B5DA00761F83 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */; };
+		CEF265602403B5DA00761F83 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */; };
+		CEF265632403C4D100761F83 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265612403C4D100761F83 /* RxBlocking.framework */; };
+		CEF265642403C4D100761F83 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265612403C4D100761F83 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF265652403C4D100761F83 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265622403C4D100761F83 /* RxTest.framework */; };
+		CEF265662403C4D100761F83 /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265622403C4D100761F83 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF265672403C67700761F83 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265612403C4D100761F83 /* RxBlocking.framework */; };
+		CEF2656C2403D2D600761F83 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF265682403CC1C00761F83 /* Nimble.framework */; };
+		CEF2656F2403D30900761F83 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEF265682403CC1C00761F83 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF2657A2406448700761F83 /* CategoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF265792406448700761F83 /* CategoryViewModelTests.swift */; };
+		CEF2657C2406449000761F83 /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2657B2406449000761F83 /* DetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +66,20 @@
 				CEA3CE6D23FCF52F003E10F5 /* RxCocoa.framework in Embed Frameworks */,
 				CEA3CE6B23FCF52F003E10F5 /* RxRelay.framework in Embed Frameworks */,
 				CEA3CE6F23FCF52F003E10F5 /* RxSwift.framework in Embed Frameworks */,
+				CEF265662403C4D100761F83 /* RxTest.framework in Embed Frameworks */,
+				CEF265642403C4D100761F83 /* RxBlocking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF2656E2403D2F500761F83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEF2656F2403D30900761F83 /* Nimble.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -87,10 +109,13 @@
 		CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorModelTests.swift; sourceTree = "<group>"; };
 		CEA3CE8023FD26B9003E10F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
-		CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCoordinatorTests.swift; sourceTree = "<group>"; };
-		CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 		CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		CEF265612403C4D100761F83 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/RxBlocking.framework; sourceTree = "<group>"; };
+		CEF265622403C4D100761F83 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/RxTest.framework; sourceTree = "<group>"; };
+		CEF265682403CC1C00761F83 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Nimble.framework; sourceTree = "<group>"; };
+		CEF265792406448700761F83 /* CategoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelTests.swift; sourceTree = "<group>"; };
+		CEF2657B2406449000761F83 /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +126,8 @@
 				CEA3CE6C23FCF52F003E10F5 /* RxCocoa.framework in Frameworks */,
 				CEA3CE6A23FCF52F003E10F5 /* RxRelay.framework in Frameworks */,
 				CEA3CE6E23FCF52F003E10F5 /* RxSwift.framework in Frameworks */,
+				CEF265652403C4D100761F83 /* RxTest.framework in Frameworks */,
+				CEF265632403C4D100761F83 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +135,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF2656C2403D2D600761F83 /* Nimble.framework in Frameworks */,
+				CEF2655F2403B5DA00761F83 /* RxRelay.framework in Frameworks */,
+				CEF2655E2403B5DA00761F83 /* RxCocoa.framework in Frameworks */,
+				CEF265602403B5DA00761F83 /* RxSwift.framework in Frameworks */,
+				CEF265672403C67700761F83 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +187,9 @@
 		CE655A9B23FB98FA00F8D0D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF265682403CC1C00761F83 /* Nimble.framework */,
+				CEF265612403C4D100761F83 /* RxBlocking.framework */,
+				CEF265622403C4D100761F83 /* RxTest.framework */,
 				CEA3CE6823FCF52F003E10F5 /* RxCocoa.framework */,
 				CEA3CE6723FCF52F003E10F5 /* RxRelay.framework */,
 				CEA3CE6923FCF52F003E10F5 /* RxSwift.framework */,
@@ -168,8 +203,8 @@
 				CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */,
 				CEA3CE8023FD26B9003E10F5 /* Info.plist */,
 				CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */,
-				CEA3CE8823FD26E1003E10F5 /* ListViewCoordinatorTests.swift */,
-				CEA3CE8A23FD26EC003E10F5 /* ListViewControllerTests.swift */,
+				CEF265792406448700761F83 /* CategoryViewModelTests.swift */,
+				CEF2657B2406449000761F83 /* DetailsViewModelTests.swift */,
 			);
 			path = CoordinatorModelTests;
 			sourceTree = "<group>";
@@ -232,6 +267,7 @@
 				CEA3CE7823FD26B9003E10F5 /* Sources */,
 				CEA3CE7923FD26B9003E10F5 /* Frameworks */,
 				CEA3CE7A23FD26B9003E10F5 /* Resources */,
+				CEF2656E2403D2F500761F83 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -329,8 +365,8 @@
 			files = (
 				CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */,
 				CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */,
-				CEA3CE8B23FD26EC003E10F5 /* ListViewControllerTests.swift in Sources */,
-				CEA3CE8923FD26E1003E10F5 /* ListViewCoordinatorTests.swift in Sources */,
+				CEF2657C2406449000761F83 /* DetailsViewModelTests.swift in Sources */,
+				CEF2657A2406448700761F83 /* CategoryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,8 +563,13 @@
 		CEA3CE8423FD26B9003E10F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage",
+				);
 				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,8 +587,13 @@
 		CEA3CE8523FD26B9003E10F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage",
+				);
 				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

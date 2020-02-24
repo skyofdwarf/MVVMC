@@ -39,9 +39,11 @@ class Coordinator: CoordinatorType {
     /// - note: `coordinatable` is _unowned_
     unowned let coordinatable: Coordinatable
 
+    #if DEBUG
     deinit {
         print("\(type(of: self)): \(#function)")
     }
+    #endif
 
     required init(_ coordinatable: Coordinatable) {
         self.coordinatable = coordinatable

@@ -50,7 +50,8 @@ private extension ListCoordinator {
             return
         }
 
-        details.vm = DetailsViewModel(context: context, coordinator: DetailsCoordinator(details))
+        details.vm = DetailsViewModel(context: context,
+                                      coordinator: DetailsCoordinator(details))
 
         navigationController.pushViewController(details, animated: true)
     }
@@ -65,11 +66,9 @@ private extension ListCoordinator {
             return
         }
 
-        let coordinator  = CategoryCoordinator(categoryVC)
-
         categoryVC.delegate = self
         categoryVC.vm = CategoryViewModel(dataSource: CategoryDataSource(),
-                                          coordinator: coordinator)
+                                          coordinator: CategoryCoordinator(categoryVC))
 
         navigationController.pushViewController(categoryVC, animated: true)
     }

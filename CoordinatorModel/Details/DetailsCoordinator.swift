@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-/// Protocol using functional interface
+/// Protocol using function interface
 protocol DetailsCoordinatorType {
     func back()
 }

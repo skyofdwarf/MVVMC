@@ -87,10 +87,4 @@ extension Reactive where Base: CategoryViewModel {
             base.coordinator.back()
         }
     }
-
-    var showHelp: Binder<Void> {
-        Binder(base) { (base, context) in
-            base.coordinator.showHelp()
-        }
-    }
 }

@@ -1,6 +1,6 @@
 //
 //  CategoryCoordinator.swift
-//  CoordinatorModel
+//  MVVMC
 //
 //  Created by kimyj on 2020/02/19.
 //  Copyright © 2020 kimyj. All rights reserved.

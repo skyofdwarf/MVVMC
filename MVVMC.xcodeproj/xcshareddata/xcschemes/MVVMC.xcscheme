@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE655A6123FB788500F8D0D4"
-               BuildableName = "CoordinatorModel.app"
-               BlueprintName = "CoordinatorModel"
-               ReferencedContainer = "container:CoordinatorModel.xcodeproj">
+               BuildableName = "MVVMC.app"
+               BlueprintName = "MVVMC"
+               ReferencedContainer = "container:MVVMC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEA3CE7B23FD26B9003E10F5"
-               BuildableName = "CoordinatorModelTests.xctest"
-               BlueprintName = "CoordinatorModelTests"
-               ReferencedContainer = "container:CoordinatorModel.xcodeproj">
+               BuildableName = "MVVMCTests.xctest"
+               BlueprintName = "MVVMCTests"
+               ReferencedContainer = "container:MVVMC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE655A6123FB788500F8D0D4"
-            BuildableName = "CoordinatorModel.app"
-            BlueprintName = "CoordinatorModel"
-            ReferencedContainer = "container:CoordinatorModel.xcodeproj">
+            BuildableName = "MVVMC.app"
+            BlueprintName = "MVVMC"
+            ReferencedContainer = "container:MVVMC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE655A6123FB788500F8D0D4"
-            BuildableName = "CoordinatorModel.app"
-            BlueprintName = "CoordinatorModel"
-            ReferencedContainer = "container:CoordinatorModel.xcodeproj">
+            BuildableName = "MVVMC.app"
+            BlueprintName = "MVVMC"
+            ReferencedContainer = "container:MVVMC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

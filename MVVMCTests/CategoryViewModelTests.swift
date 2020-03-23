@@ -14,7 +14,7 @@ import RxBlocking
 import RxTest
 import Nimble
 
-@testable import CoordinatorModel
+@testable import MVVMC
 
 struct  MockCategoryDataSource: CategoryDataSourceType {
     let value: Int

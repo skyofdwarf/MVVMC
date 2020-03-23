@@ -28,7 +28,6 @@
 		CEA3CE7323FD206D003E10F5 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */; };
 		CEA3CE7523FD20B3003E10F5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */; };
 		CEA3CE7723FD210F003E10F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7623FD210F003E10F5 /* ViewModel.swift */; };
-		CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */; };
 		CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */; };
 		CEF2655B2403AB5D00761F83 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */; };
 		CEF2655D2403AB6600761F83 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2655C2403AB6600761F83 /* DetailsCoordinator.swift */; };
@@ -86,7 +85,7 @@
 
 /* Begin PBXFileReference section */
 		CE1B077A23FBB70C00287951 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		CE655A6223FB788500F8D0D4 /* CoordinatorModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE655A6223FB788500F8D0D4 /* MVVMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE655A6523FB788500F8D0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE655A6923FB788500F8D0D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE655A6C23FB788500F8D0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,8 +104,7 @@
 		CEA3CE7223FD206D003E10F5 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
 		CEA3CE7423FD20B3003E10F5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CEA3CE7623FD210F003E10F5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorModelTests.swift; sourceTree = "<group>"; };
+		CEA3CE7C23FD26B9003E10F5 /* MVVMCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA3CE8023FD26B9003E10F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		CEF2655A2403AB5D00761F83 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
@@ -149,8 +147,8 @@
 		CE655A5923FB788500F8D0D4 = {
 			isa = PBXGroup;
 			children = (
-				CE655A6423FB788500F8D0D4 /* CoordinatorModel */,
-				CEA3CE7D23FD26B9003E10F5 /* CoordinatorModelTests */,
+				CE655A6423FB788500F8D0D4 /* MVVMC */,
+				CEA3CE7D23FD26B9003E10F5 /* MVVMCTests */,
 				CE655A6323FB788500F8D0D4 /* Products */,
 				CE655A9B23FB98FA00F8D0D4 /* Frameworks */,
 			);
@@ -159,13 +157,13 @@
 		CE655A6323FB788500F8D0D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE655A6223FB788500F8D0D4 /* CoordinatorModel.app */,
-				CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */,
+				CE655A6223FB788500F8D0D4 /* MVVMC.app */,
+				CEA3CE7C23FD26B9003E10F5 /* MVVMCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE655A6423FB788500F8D0D4 /* CoordinatorModel */ = {
+		CE655A6423FB788500F8D0D4 /* MVVMC */ = {
 			isa = PBXGroup;
 			children = (
 				CEA3CE8E23FD28C3003E10F5 /* Details */,
@@ -181,7 +179,7 @@
 				CEA3CE7623FD210F003E10F5 /* ViewModel.swift */,
 				CE655AA823FBAC8800F8D0D4 /* Coordinator.swift */,
 			);
-			path = CoordinatorModel;
+			path = MVVMC;
 			sourceTree = "<group>";
 		};
 		CE655A9B23FB98FA00F8D0D4 /* Frameworks */ = {
@@ -197,16 +195,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CEA3CE7D23FD26B9003E10F5 /* CoordinatorModelTests */ = {
+		CEA3CE7D23FD26B9003E10F5 /* MVVMCTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEA3CE7E23FD26B9003E10F5 /* CoordinatorModelTests.swift */,
 				CEA3CE8023FD26B9003E10F5 /* Info.plist */,
 				CEA3CE8623FD26D2003E10F5 /* ListViewModelTests.swift */,
 				CEF265792406448700761F83 /* CategoryViewModelTests.swift */,
 				CEF2657B2406449000761F83 /* DetailsViewModelTests.swift */,
 			);
-			path = CoordinatorModelTests;
+			path = MVVMCTests;
 			sourceTree = "<group>";
 		};
 		CEA3CE8C23FD28BA003E10F5 /* List */ = {
@@ -242,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE655A6123FB788500F8D0D4 /* CoordinatorModel */ = {
+		CE655A6123FB788500F8D0D4 /* MVVMC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE655A7623FB788700F8D0D4 /* Build configuration list for PBXNativeTarget "CoordinatorModel" */;
+			buildConfigurationList = CE655A7623FB788700F8D0D4 /* Build configuration list for PBXNativeTarget "MVVMC" */;
 			buildPhases = (
 				CE655A5E23FB788500F8D0D4 /* Sources */,
 				CE655A5F23FB788500F8D0D4 /* Frameworks */,
@@ -255,14 +252,14 @@
 			);
 			dependencies = (
 			);
-			name = CoordinatorModel;
+			name = MVVMC;
 			productName = CoordinatorModel;
-			productReference = CE655A6223FB788500F8D0D4 /* CoordinatorModel.app */;
+			productReference = CE655A6223FB788500F8D0D4 /* MVVMC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEA3CE7B23FD26B9003E10F5 /* CoordinatorModelTests */ = {
+		CEA3CE7B23FD26B9003E10F5 /* MVVMCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "CoordinatorModelTests" */;
+			buildConfigurationList = CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "MVVMCTests" */;
 			buildPhases = (
 				CEA3CE7823FD26B9003E10F5 /* Sources */,
 				CEA3CE7923FD26B9003E10F5 /* Frameworks */,
@@ -274,9 +271,9 @@
 			dependencies = (
 				CEA3CE8223FD26B9003E10F5 /* PBXTargetDependency */,
 			);
-			name = CoordinatorModelTests;
+			name = MVVMCTests;
 			productName = CoordinatorModelTests;
-			productReference = CEA3CE7C23FD26B9003E10F5 /* CoordinatorModelTests.xctest */;
+			productReference = CEA3CE7C23FD26B9003E10F5 /* MVVMCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +295,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE655A5D23FB788500F8D0D4 /* Build configuration list for PBXProject "CoordinatorModel" */;
+			buildConfigurationList = CE655A5D23FB788500F8D0D4 /* Build configuration list for PBXProject "MVVMC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -311,8 +308,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE655A6123FB788500F8D0D4 /* CoordinatorModel */,
-				CEA3CE7B23FD26B9003E10F5 /* CoordinatorModelTests */,
+				CE655A6123FB788500F8D0D4 /* MVVMC */,
+				CEA3CE7B23FD26B9003E10F5 /* MVVMCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA3CE8723FD26D2003E10F5 /* ListViewModelTests.swift in Sources */,
-				CEA3CE7F23FD26B9003E10F5 /* CoordinatorModelTests.swift in Sources */,
 				CEF2657C2406449000761F83 /* DetailsViewModelTests.swift in Sources */,
 				CEF2657A2406448700761F83 /* CategoryViewModelTests.swift in Sources */,
 			);
@@ -375,7 +371,7 @@
 /* Begin PBXTargetDependency section */
 		CEA3CE8223FD26B9003E10F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE655A6123FB788500F8D0D4 /* CoordinatorModel */;
+			target = CE655A6123FB788500F8D0D4 /* MVVMC */;
 			targetProxy = CEA3CE8123FD26B9003E10F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -524,7 +520,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage",
 				);
-				INFOPLIST_FILE = CoordinatorModel/Info.plist;
+				INFOPLIST_FILE = MVVMC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +543,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage",
 				);
-				INFOPLIST_FILE = CoordinatorModel/Info.plist;
+				INFOPLIST_FILE = MVVMC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +566,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage",
 				);
-				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
+				INFOPLIST_FILE = MVVMCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +576,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorModel.app/CoordinatorModel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMC.app/MVVMC";
 			};
 			name = Debug;
 		};
@@ -594,7 +590,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage",
 				);
-				INFOPLIST_FILE = CoordinatorModelTests/Info.plist;
+				INFOPLIST_FILE = MVVMCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,14 +600,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorModel.app/CoordinatorModel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMC.app/MVVMC";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE655A5D23FB788500F8D0D4 /* Build configuration list for PBXProject "CoordinatorModel" */ = {
+		CE655A5D23FB788500F8D0D4 /* Build configuration list for PBXProject "MVVMC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE655A7423FB788700F8D0D4 /* Debug */,
@@ -620,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE655A7623FB788700F8D0D4 /* Build configuration list for PBXNativeTarget "CoordinatorModel" */ = {
+		CE655A7623FB788700F8D0D4 /* Build configuration list for PBXNativeTarget "MVVMC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE655A7723FB788700F8D0D4 /* Debug */,
@@ -629,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "CoordinatorModelTests" */ = {
+		CEA3CE8323FD26B9003E10F5 /* Build configuration list for PBXNativeTarget "MVVMCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEA3CE8423FD26B9003E10F5 /* Debug */,
